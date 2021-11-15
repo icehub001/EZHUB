@@ -1,0 +1,64 @@
+if game:GetService("CoreGui"):FindFirstChild("EZ HUB") then
+   game:GetService("CoreGui"):FindFirstChild("EZ HUB"):Destroy()
+end
+local UILib = loadstring(game:HttpGet('https://pastebin.com/raw/KCVC7epu'))()
+
+local win = UILib:Window("EZ HUB",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+local MainSection = win:Tab("Main")
+
+MainSection:Button("Button", function()
+
+end)
+
+MainSection:Toggle("Toggle",false, function(State)
+
+end)
+
+MainSection:Dropdown("Dropdown 1", {"1","2","3"}, function(String)
+
+end)
+MainSection:Slider("Slider",0,100,16,true, function(State)
+    
+end)
+
+local Settings = win:Tab("Settings")
+Settings:Label("UI Toggle Key:  Right-Ctrl")
+Settings:Label("Credit : 03s.4358")
+Settings:Button("Copy Discord Invite", function()
+    setclipboard("https://discord.gg/Q8t8N5nU8p")
+    UILib:Notification("Notification", "Copied!", "Okay")
+end)
+Settings:Button("Copy Youtube", function()
+   setclipboard("Just Kidding")
+   UILib:Notification("Notification", "Copied!", "Okay")
+end)
+ScreenGui.Parent = game.GetService("CoreGui")
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(-0.0770889446, 0, 0, 0)
+Frame.Size = UDim2.new(0, 2285, 0, 855)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(0.268271327, 0, 0.291228056, 0)
+TextLabel.Size = UDim2.new(0, 810, 0, 280)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "รันเเล้วจ้า"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 100.000
