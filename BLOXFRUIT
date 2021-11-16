@@ -10,8 +10,16 @@ MainSection:Button("Button", function()
 
 end)
 
-MainSection:Toggle("Toggle",false, function(State)
-
+MainSection:Toggle("KillAura",false, function(State)
+_G.auto = false
+while _G.auto do wait()
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do 
+    if v.ClassName == "Model" then
+        v.Humanoid.Health = die
+wait(.1)
+end
+    end 
+    end
 end)
 
 MainSection:Dropdown("Dropdown 1", {"1","2","3"}, function(String)
@@ -34,31 +42,3 @@ Settings:Button("Copy Youtube", function()
 end)
 ScreenGui.Parent = game.GetService("CoreGui")
 
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-
---Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(-0.0770889446, 0, 0, 0)
-Frame.Size = UDim2.new(0, 2285, 0, 855)
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Position = UDim2.new(0.268271327, 0, 0.291228056, 0)
-TextLabel.Size = UDim2.new(0, 810, 0, 280)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "รันเเล้วจ้า"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 100.000
