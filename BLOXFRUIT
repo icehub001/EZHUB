@@ -31,7 +31,7 @@ end)
 
 local Settings = win:Tab("Settings")
 Settings:Label("UI Toggle Key:  Right-Ctrl")
-Settings:Label("Credit : 03s.4358")
+Settings:Label("Thank For Use!")
 Settings:Button("Copy Discord Invite", function()
     setclipboard("https://discord.gg/Q8t8N5nU8p")
     UILib:Notification("Notification", "Copied!", "Okay")
